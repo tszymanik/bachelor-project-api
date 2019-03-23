@@ -1,0 +1,30 @@
+{
+  "name": "bachelor-project-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "drop-database": "node ./setup/dropDatabase.js",
+    "importer": "node ./importer/importer.js",
+    "generate-sample-data": "node ./setup/generateSampleData.js",
+    "setup": "npm run drop-database && npm run importer && npm run generate-sample-data"
+  },
+  "author": "",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "csvtojson": "^2.0.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.1.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
